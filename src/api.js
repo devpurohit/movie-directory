@@ -9,6 +9,7 @@ const requests = {
     fantasyRequest: `/discover/movie?api_key=${API_KEY}&with_genres=14`,
     romanceRequest: `/discover/movie?api_key=${API_KEY}&with_genres=10749`,
     horrorRequest: `/discover/movie?api_key=${API_KEY}&with_genres=27`,
+    fetchDetails: (movieId) => `/movie/${movieId}?api_key=${API_KEY}`
 };
 
 export default requests;

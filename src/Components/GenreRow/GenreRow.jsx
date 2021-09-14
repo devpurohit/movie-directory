@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+
 import './GenreRow.scss';
 import httpClient from '../../axios';
 
@@ -15,6 +17,8 @@ function GenreRow({ title, reqUrl }) {
 
     },[reqUrl]);
 
+    const slugify = (movieTitle) => `/movie-details/${movieTitle.replaceAll(' ', '-').toLowerCase()}`
+
     return (
         <div className="genre--row">
             <h2>{title}</h2>
@@ -22,11 +26,12 @@ function GenreRow({ title, reqUrl }) {
             {
                 movies.map((movie,i) => {
                     return (
-                        <img className="card"
-                            src={`https://image.tmdb.org/t/p/w400${movie.poster_path}`}
-                            alt={movie.name}
-                            />
-                        
+                        <Link to={{ pathname: slugify(movie.name || movie.title), state: { movieId: movie.id} }} key={i}>
+                            <img className="card"
+                                src={`https://image.tmdb.org/t/p/w400${movie.poster_path}`}
+                                alt={movie.name}
+                                />
+                        </Link>
                         )
                     })
                 }

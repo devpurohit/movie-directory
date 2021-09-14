@@ -1,6 +1,11 @@
 .genre--row {
     margin-left: 1.5rem;
+    ::-webkit-scrollbar {
+        width: 0;  /* Remove scrollbar space */
+        background: transparent;  /* Optional: just make scrollbar invisible */
+        display: none;
 
+    }
     .card {
         object-fit: contain;
         height: 200px;
@@ -36,14 +41,10 @@
     padding: 1rem;
     cursor: pointer;
 
-    &:-webkit-scrollbar {
-        display: none;
-    }
     -ms-overflow-style: none;  
     scrollbar-width: none;
 
 }
-
 
 
 

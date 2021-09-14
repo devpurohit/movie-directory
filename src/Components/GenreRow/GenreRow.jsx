@@ -28,7 +28,7 @@ function GenreRow({ title, reqUrl }) {
                     return (
                         <Link to={{ pathname: slugify(movie.name || movie.title), state: { movieId: movie.id} }} key={i}>
                             <img className="card"
-                                src={`https://image.tmdb.org/t/p/w400${movie.poster_path}`}
+                                src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
                                 alt={movie.name}
                                 />
                         </Link>

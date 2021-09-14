@@ -1,0 +1,20 @@
+header {
+    position: sticky;
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    background: rgb(2,0,36);
+    background: linear-gradient(173deg, rgba(2,0,36,1) 0%, rgba(33,33,31,1) 49%, rgba(255,51,0,1) 100%); 
+    .search--input {
+        height: 1.5rem;
+        border: 0;
+        border-radius: 2px;
+    }
+
+    .search--button {
+        height: 1.5rem;
+        margin-left: 0.5rem;
+    }
+}

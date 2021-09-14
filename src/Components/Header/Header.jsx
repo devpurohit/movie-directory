@@ -1,13 +1,15 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import React, { setQuery, useState } from "react";
+import { Link, Redirect, useHistory } from "react-router-dom";
 
 import './Header.scss';
 
 const Header = () => {
-    const [query, setQuery] = useState("");
+    let history = useHistory();
 
+    const [query, setQuery ] = useState("");
     const searchMovie = (event) => {
         event.preventDefault();
+        history.push(`/search/${query}`);
     }
 
     return (

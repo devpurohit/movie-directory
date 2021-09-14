@@ -10,12 +10,13 @@ import './App.css';
 import Home from './Components/Home/Home';
 import Header from './Components/Header/Header';
 import MovieDetails from './Components/MovieDetails/MovieDetails';
+import SearchResults from './Components/SearchResults/SearchResults';
 
 function App() {
   return (
     <div className="App">
       <Router> 
-      <Header />
+        <Header />
       
         <Switch>
           <Route exact path="/">
@@ -23,6 +24,9 @@ function App() {
           </Route>
           <Route path="/movie-details/:slug" >
             <MovieDetails />
+          </Route>
+          <Route path="/search/:slug">
+            <SearchResults />
           </Route>
         </Switch>
       </Router>

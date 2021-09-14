@@ -1,0 +1,31 @@
+.search--row {
+    padding: 2rem;
+    h3 {
+        margin-bottom: 1rem;
+    }
+
+    .search-results--container {
+    
+        a {
+            padding: 1rem;
+        }
+
+        .card {
+            object-fit: contain;
+            height: 200px;
+            margin: 0.75rem;
+            transition: all 400ms;
+        
+            &:hover {
+                scale: 1.08;
+            }
+        }
+
+        @media only screen and (max-width: 450px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+    }
+}

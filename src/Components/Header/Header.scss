@@ -8,6 +8,7 @@ header {
     padding: 1rem;
     background: rgb(2,0,36);
     background: linear-gradient(173deg, rgba(2,0,36,1) 0%, rgba(33,33,31,1) 49%, rgba(255,51,0,1) 100%); 
+
     .search--input {
         height: 1.5rem;
         border: 0;
@@ -22,5 +23,20 @@ header {
     a {
         text-decoration: none;
         color: inherit;
+    }
+
+    @media only screen and (max-width: 450px) {
+        flex-direction: column;
+        gap: 0.6rem;
+
+        .search--input {
+            height: 1rem;
+
+        }
+    
+        .search--button {
+            height: 1.4rem;
+            margin-left: 0.5rem;
+        }
     }
 }

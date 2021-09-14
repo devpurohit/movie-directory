@@ -6,10 +6,25 @@
         height: 200px;
         margin-right: 0.75rem;
         transition: all 400ms;
-    
+
+        @media only screen and (max-width: 450px) {
+            flex-direction: column;
+            gap: 0.6rem;
+        }
+
         &:hover {
             scale: 1.08;
         }
+    }
+
+    @media only screen and (max-width: 450px) {
+        margin-left: 0.5rem;
+
+        .card {
+            height: 100px;
+            margin-right: 0.2rem;
+        }
+
     }
 }
 
